@@ -1,5 +1,5 @@
 from Calculator import *
-# first we will convert it into str then we will insert a + sign between then
+# DO i need to explain this? You are intelligent enough to understand it (i'm to lazy to explain)
 q = ''
 user_input = 0
 def user():
@@ -27,8 +27,6 @@ while q.lower() != 'q':
             lst.append(num)
         add(lst)
         print('...............................................\n')
-            # ans = ans + num
-            # print(ans)
     elif user_input == 2:
         print('First input the number then input the numbers you want to subtract\n')
         no = int(input('How many numbers do you want to subtract with the first number? '))
