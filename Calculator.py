@@ -271,6 +271,45 @@ def rectperi(length, breadth):
 def sqperi(side):
     ans = 4*side
     print(f'perimeter of square with side: {side} is {ans}')
+def perfpolyperi(no_side, side):
+    ans = no_side * side
+    print(f'Perimeter of a perfect polygon with {no_side} is {ans}')
 def arearect(length, breadth):
-    ans = length in breadth
+    ans = length * breadth
     print(f'area of rectangle length : {length}, breadth: {breadth} is\n{ans}')
+def areatri(height, base):
+    r'''
+    h = height
+    b = base
+                ___
+        /\       |        
+       /  \      |
+      /    \     | h
+     /      \    |   
+    /________\  _|_ 
+    
+    |----b----|   
+    '''
+    ans = 1/2 * height * base
+    print(f'Area of the traingle is {ans}')
+def areatrap(height, a, b):
+
+    r'''
+    h = height
+    a = side
+    b = parrellel side
+
+       |-------a--------|
+       _________________
+      /                 |\
+     /                  |h\
+    /___________________|__\
+    
+    |------------b-----------|
+    '''
+    ans = height(a+b)/2
+    print(f'Area of the trapazium is {ans}')
+
+def simintrest(principal, rate, time):
+    # Yet to add, coming soon...
+    pass
