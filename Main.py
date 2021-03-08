@@ -1,5 +1,5 @@
 from Calculator import *
-# DO i need to explain this? You are intelligent enough to understand it (i'm to lazy to explain)
+# DO i need to explain this? You are intelligent enough to understand it (i'm too lazy to explain)
 q = ''
 user_input = 0
 def user():
