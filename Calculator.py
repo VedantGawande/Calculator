@@ -311,5 +311,11 @@ def areatrap(height, a, b):
     print(f'Area of the trapazium is {ans}')
 
 def simintrest(principal, rate, time):
-    # Yet to add, coming soon...
-    pass
+    si = principal * rate/100 * time
+    amount = si + principal
+    print(f'Total amount after {time} year(s) at the rate of intrest {rate}% per annum will be {amount}\nTotal intrest will be {si}')
+
+def comintrest(principal, rate, time):
+    amount = principal * (1 + rate/100)**time
+    ci = amount - principal
+    print(f'Total amount after {time} year(s) at the rate of intrest {rate}% per annum will be {amount}\nTotal intrest will be {ci}')
