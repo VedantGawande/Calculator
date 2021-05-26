@@ -1,11 +1,38 @@
+# Update includes -
+    # Geometry operations
+    # Simple Intrest
+    # Compound Intrest
 from Calculator import *
-# DO i need to explain this? You are intelligent enough to understand it (i'm too lazy to explain)
 q = ''
 user_input = 0
 def user():
     global user_input
     try:
-        user_input = int(input('Press 1 to add\n2 to sub\n3 to multiply\n4 to divide\n5 to power\n6 to square\n7 to cube\n8 to check even or odd\n9 to check greater or smaller\n10 to check divisiblity\n11 to show factors\n12 to check prime or not\n13 to %\n14 to prime factorize\n15 to check if perfect square\n16 to check if perfect cube\n17 to show square root\n'))
+        user_input = int(input('''Press 1 to add
+2 to sub
+3 to multiply
+4 to divide
+5 to power
+6 to square
+7 to cube
+8 to check even or odd
+9 to check greater or smaller
+10 to check divisiblity
+11 to show factors
+12 to check prime or not
+13 to %
+14 to prime factorize
+15 to check if perfect square
+16 to check if perfect cube
+17 to show square root
+18 to find perimeter of rectangle
+19 to find perimeter of square
+20 to find perimeter of perfect polygon
+21 to find area of rectangle
+22 to find area of trapezium
+23 to find area of triangle
+24 to find amount/intrest for simple intrest
+25 to find amount/intrest for compound intrest\n'''))
         print('')
         invalid = False
     except:
@@ -27,6 +54,8 @@ while q.lower() != 'q':
             lst.append(num)
         add(lst)
         print('...............................................\n')
+            # ans = ans + num
+            # print(ans)
     elif user_input == 2:
         print('First input the number then input the numbers you want to subtract\n')
         no = int(input('How many numbers do you want to subtract with the first number? '))
@@ -122,7 +151,49 @@ while q.lower() != 'q':
         print(sqrt(no))
         print('\n...............................................\n')
     
+    elif user_input == 18:
+        length = int(input('Length: ')) 
+        breadth = int(input('Breadth: '))
+        rectperi(length, breadth)
+
+    elif user_input == 19:
+        side = int(input('Side: '))
+        sqperi(side)
+
+    elif user_input == 20:
+        no = int(input('Number of sides: '))
+        length = int(input('Length of sides: '))
+        perfpolyperi(no, side)
+
+    elif user_input == 21:
+        length = int(input('Length: ')) 
+        breadth = int(input('Breadth: '))
+        arearect(length, breadth)
+
+    elif user_input == 22:
+        h = int(input('Height: '))
+        a =  int(input('Length of 1st parallel side: '))
+        b =  int(input('Length of 2nd parallel side: '))
+        areatrap(h, a, b)
+
+    elif user_input == 23:
+        height = int(input('Height: '))
+        base = int(input('Base: '))
+        areatri(height, base)
+    
+    elif user_input == 24:
+        p = float(input('Principal: '))
+        r = float(input('Rate: '))
+        t = float(input('time: '))
+        simintrest(p, r, t)
+
+    elif user_input == 25:
+        p = float(input('Principal: '))
+        r = float(input('Rate: '))
+        t = float(input('time: '))
+        comintrest(p, r, t)
+
     else:
-        print('Not a valid option\n')
-        print('...............................................')
-    q = input('Press q to quit: ')
+        print('Not a valid No.\n')
+        print('...............................................\n')
+        q = input('Press q to quit: ')
