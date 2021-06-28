@@ -1,8 +1,17 @@
+# Update V1.5 or something idk
+# Date - 28/8/2021
+# Update includes-
+#   More detailed doc strings / Detailed explaination
+#   Removing unnecessary code / Making it shorter
+#   A bit more organised, I guess
+#   And added some very bad jokes cuz i'm bored and there is no internet and this pc sucks
+
 from math import sqrt
+
 # Operations
 def add(nums):
     '''
-    It will take a list tor tuple as argument
+    It will take a list or tuple as argument
     Then it will add all the items in the argument
     '''
     ans = 0
@@ -11,7 +20,7 @@ def add(nums):
     print(ans)
 def sub(nums):
     '''
-    It takes arguments = numbers
+    It will take number(s) as argument(s)
     it will subtract all other numbers with the first number
     '''
     ans = nums[0]
@@ -24,7 +33,7 @@ def sub(nums):
 def mul(nums):
     """
     It multiplies every number with other
-    here ans = 1 because if we multiply nums by 0 it will become 0 and 1 * x = x
+    here ans = 1 as a default value, because if we multiply nums by 0 it will become 0 and 1 * x = x
     """
     ans = 1
     for i in nums:
@@ -32,7 +41,7 @@ def mul(nums):
     print(ans)
 def div(nums):
     '''
-    It takes arguments = numbers
+    It takes argument(s) = number(s)
     it will divide all other numbers with the first number
     '''
     ans = nums[0]
@@ -43,9 +52,12 @@ def div(nums):
             pass
     print(ans)
 
+
+# old functions... you can ignore this
+# ---------------
 def add2(*nums):
     '''
-    It will take arguments as nums
+    It will take num(s) as argument(s)
     Then it will add all the arguments
     '''
     ans = 0
@@ -54,7 +66,7 @@ def add2(*nums):
     print(ans)
 def sub2(*nums):
     '''
-    It takes arguments = numbers
+    It takes argument(s) = number(s)
     it will subtract all other numbers with the first number
     '''
     ans = nums[0]
@@ -87,16 +99,10 @@ def div2(*nums):
         else:
             pass
     print(ans)
+# ----------------
 
-def pow(num1, pow):
-    '''It takes number and power and gives the result'''
-    ans = num1 ** pow
-    print(f'{num1}^{pow} = {ans}')
-def square(num):
-    print(f'{num}^2 = {num ** 2}')
-def cube(num):
-    print(f'{num}^3 = {num ** 3}')
 
+# easy peasy functions (idk, if that is a word lol)
 def evenodd(num1):
     if num1 % 2 == 0:
         print(num1, 'is even')
@@ -110,18 +116,30 @@ def greater(num1,num2):
     else:
         print(f'{num1} = {num2}')
 
+# easy squared
+def pow(num1, pow):
+    '''It takes number and power and gives the result'''
+    ans = num1 ** pow
+    print(f'{num1}^{pow} = {ans}')
+def square(num):
+    print(f'{num}^2 = {num ** 2}')
+def cube(num):
+    print(f'{num}^3 = {num ** 3}')
+
+# Super duper easy
 def divisible(num,divisor):
     if num % divisor == 0:
         print(f'{num} is divisible by {divisor}')
     else:
         print(f'{num} is not divisible by {divisor}')
+
+# This should be medium (it definetly took me 5 minutes and not 5 hours)
 def factors(num):
     '''
     This function runs a for loop between 1 and the num + 1
     and checks if the number is divisble by number in the range and prints it
     '''
-    nu = num + 1
-    for i in range(1,nu):
+    for i in range(1,num+1):
         if num % i == 0:
             print(i)
     return True
@@ -143,12 +161,6 @@ def isprime(num):
         print(f'{num} is prime')
     else:
         print(f'{num} is not prime')
-def percent(percent,num):
-    '''
-    No need to explain this
-    '''
-    ans = percent/100 * num
-    print(ans)
 def primefac(num):
     '''
     num --> prime factors
@@ -176,6 +188,15 @@ def primefac(num):
             print(f'x {int(num)}')
             num = num / num
         # print('')
+
+def percent(percent,num):
+    '''
+    No need to explain this
+    '''
+    ans = percent/100 * num
+    print(ans)
+
+# Copy paste previous code
 def iscube(num):
     '''
     it first prime factorises the num 
@@ -264,6 +285,8 @@ def issquare(num):
     else:
         print(f'{no} is not a square')
 
+
+
 # Geometry
 def rectperi(length, breadth):
     ans = 2 * (length + breadth)
@@ -277,6 +300,9 @@ def perfpolyperi(no_side, side):
 def arearect(length, breadth):
     ans = length * breadth
     print(f'area of rectangle length : {length}, breadth: {breadth} is\n{ans}')
+
+# I TYPED THIS SHAPES, so that you know how the shpae looks like
+# (I don't think anyone reading this doesn't know the shapes of these polygons, but still i like wasting my time)
 def areatri(height, base):
     r'''
     h = height
@@ -310,12 +336,22 @@ def areatrap(height, a, b):
     ans = height(a+b)/2
     print(f'Area of the trapazium is {ans}')
 
+
+# Data handling
 def simintrest(principal, rate, time):
     si = principal * rate/100 * time
     amount = si + principal
     print(f'Total amount after {time} year(s) at the rate of intrest {rate}% per annum will be {amount}\nTotal intrest will be {si}')
 
+# This is compound intrest not communist intrest(unless you copy it)
 def comintrest(principal, rate, time):
     amount = principal * (1 + rate/100)**time
     ci = amount - principal
     print(f'Total amount after {time} year(s) at the rate of intrest {rate}% per annum will be {amount}\nTotal intrest will be {ci}')
+
+
+# Previous Update dates-
+# V1.0 - 26/01/2021
+# V1.1 - 8/03/2021
+# I don't care about 2 and 3 So,
+# V1.4 - 26/05/2021
