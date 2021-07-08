@@ -1,10 +1,16 @@
 # Update V1.5 or something idk
-# Date - 28/8/2021
+# Date - 28/08/2021
 # Update includes-
 #   More detailed doc strings / Detailed explaination
 #   Removing unnecessary code / Making it shorter
 #   A bit more organised, I guess
 #   And added some very bad jokes cuz i'm bored and there is no internet and this pc sucks
+
+# Update V1.5.1
+# Date - 04/07/2021
+# Newly Added feature-
+#   Finding area of triangle through Heron's Formula
+
 
 from math import sqrt
 
@@ -318,6 +324,18 @@ def areatri(height, base):
     '''
     ans = 1/2 * height * base
     print(f'Area of the traingle is {ans}')
+def areatri_h(a,b,c):
+    '''           
+         /\             
+        /  \     
+     a /    \ b    
+      /      \     
+     /________\ 
+          c
+    '''
+    s = (a+b+c)/2
+    ans = sqrt(s(s-a)(s-b)(s-c))
+    print(f'Area of the traingle is {ans}')
 def areatrap(height, a, b):
 
     r'''
@@ -350,7 +368,7 @@ def comintrest(principal, rate, time):
     print(f'Total amount after {time} year(s) at the rate of intrest {rate}% per annum will be {amount}\nTotal intrest will be {ci}')
 
 
-# Previous Update dates-
+# Previous large Update dates-
 # V1.0 - 26/01/2021
 # V1.1 - 8/03/2021
 # I don't care about 2 and 3 So,
