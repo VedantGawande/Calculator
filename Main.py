@@ -1,7 +1,3 @@
-# Update includes -
-    # Geometry operations
-    # Simple Intrest
-    # Compound Intrest
 from Calculator import *
 q = ''
 user_input = 0
@@ -30,9 +26,10 @@ def user():
 20 to find perimeter of perfect polygon
 21 to find area of rectangle
 22 to find area of trapezium
-23 to find area of triangle
-24 to find amount/intrest for simple intrest
-25 to find amount/intrest for compound intrest\n'''))
+23 to find area of triangle if measure of base & height is known
+24 to find area of triangle if measure of sides are known
+25 to find amount/intrest for simple intrest
+26 to find amount/intrest for compound intrest\n'''))
         print('')
         invalid = False
     except:
@@ -180,14 +177,20 @@ while q.lower() != 'q':
         height = int(input('Height: '))
         base = int(input('Base: '))
         areatri(height, base)
-    
+
     elif user_input == 24:
+        a = int(input('Side A: '))
+        b = int(input('Side B: '))
+        c = int(input('Side C: '))
+        areatri_h(a,b,c)
+
+    elif user_input == 25:
         p = float(input('Principal: '))
         r = float(input('Rate: '))
         t = float(input('time: '))
         simintrest(p, r, t)
 
-    elif user_input == 25:
+    elif user_input == 26:
         p = float(input('Principal: '))
         r = float(input('Rate: '))
         t = float(input('time: '))
@@ -197,3 +200,8 @@ while q.lower() != 'q':
         print('Not a valid No.\n')
         print('...............................................\n')
         q = input('Press q to quit: ')
+
+# Update includes -
+# Geometry operations
+# Simple Intrest
+# Compound Intrest
