@@ -11,6 +11,11 @@
 # Newly Added feature-
 #   Finding area of triangle through Heron's Formula
 
+# Update V1.5.2
+# Date - 11/07/2021
+# Newly Added features-
+#   Km/h to M/s
+#   M/s to Km/h
 
 from math import sqrt
 
@@ -308,7 +313,7 @@ def arearect(length, breadth):
     print(f'area of rectangle length : {length}, breadth: {breadth} is\n{ans}')
 
 # I TYPED THIS SHAPES, so that you know how the shpae looks like
-# (I don't think anyone reading this doesn't know the shapes of these polygons, but still i like wasting my time)
+# (I don't think anyone reading this doesn't know the shapes of these polygons, but anyway i like wasting my time)
 def areatri(height, base):
     r'''
     h = height
@@ -366,6 +371,20 @@ def comintrest(principal, rate, time):
     amount = principal * (1 + rate/100)**time
     ci = amount - principal
     print(f'Total amount after {time} year(s) at the rate of intrest {rate}% per annum will be {amount}\nTotal intrest will be {ci}')
+
+# Km/h to M/s
+def M_s(km):
+    m = km*1000
+    s = 3600
+    ans = m/s
+    print(f'{km} km/h --> {ans} m/s')
+# M/s to Km/h
+def Km_h(m):
+    km = m/1000
+    h = 1/3600
+    ans = km/h
+    print(f'{m} m/s --> {ans} km/h')
+
 
 
 # Previous large Update dates-
