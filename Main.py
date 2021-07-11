@@ -29,7 +29,9 @@ def user():
 23 to find area of triangle if measure of base & height is known
 24 to find area of triangle if measure of sides are known
 25 to find amount/intrest for simple intrest
-26 to find amount/intrest for compound intrest\n'''))
+26 to find amount/intrest for compound intrest
+27 to convert km/h to m/s
+28 to convert m/s to km/h\n'''))
         print('')
         invalid = False
     except:
@@ -195,7 +197,15 @@ while q.lower() != 'q':
         r = float(input('Rate: '))
         t = float(input('time: '))
         comintrest(p, r, t)
+    
+    elif user_input == 27:
+        km = int(input('km: '))
+        M_s(km)
 
+    elif user_input == 28:
+        m = int(input('m:'))
+        Km_h(m)
+        
     else:
         print('Not a valid No.\n')
         print('...............................................\n')
