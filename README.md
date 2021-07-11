@@ -1,8 +1,7 @@
 # Calculator
 This is a simple calculator made using basic python.
-
 Functions are in __'Calculator.py'__  and main file is __'Main.py'__
----
+
 ## These are the fuctions:
 
 - 1 to add
