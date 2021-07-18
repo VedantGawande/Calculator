@@ -1,7 +1,7 @@
 # Calculator
 This is a simple calculator made using basic python.
 
-Functions are located in __'Calculator.py'__  and main file is __'Main.py'__
+Functions are located in __'Calculator.py'__  and main file is __'Main_updated.py'__
 
 ## These are the fuctions:
 
@@ -33,3 +33,9 @@ Functions are located in __'Calculator.py'__  and main file is __'Main.py'__
 - 26 to find amount/intrest for compound intrest
 - 27 to convert km/h to m/s
 - 28 to convert m/s to km/h
+- 29 to find speed
+- 30 to find velocity
+- 31 to find accelaration
+- 32 to find a value using v = u + at
+- 33 to find a value using s = ut + 1/2 * at
+- 34 to find a value using 2as = v^2 - u^2\n
