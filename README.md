@@ -38,4 +38,4 @@ Functions are located in __'Calculator.py'__  and main file is __'Main_updated.p
 - 31 to find accelaration
 - 32 to find a value using v = u + at
 - 33 to find a value using s = ut + 1/2 * at
-- 34 to find a value using 2as = v^2 - u^2\n
+- 34 to find a value using 2as = v^2 - u^2
