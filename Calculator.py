@@ -7,6 +7,11 @@
 #   Finding a value using equations of motion
 #   Some bug fixes
 
+# Update V1.6.1
+# Date - 23/07/2021
+# Newly added features-
+#   Finding LCM
+#   Finding Common Factors
 from math import sqrt
 
 # Operations
@@ -286,6 +291,48 @@ def issquare(num):
     else:
         print(f'{no} is not a square')
 
+# Common Factor
+def comfac(num1, num2):
+    fac_1 = []
+    fac_2 = []
+    for i in range(1,num1+1):
+        if num1 % i == 0:
+            fac_1.append(i)
+    for i in range(1,num2+1):
+        if num2 % i == 0:
+            fac_2.append(i)
+
+    fac_1 = set(fac_1)
+    fac_2 = set(fac_2)
+
+    a = fac_1 & fac_2
+    print(f'Common factors of {num1} and {num2} is/are: ', end='')
+    for i in a:
+        print(f'{i}, ', end='')
+    print('')
+
+
+# Lowest Common Multiple
+def lcm(num1,num2):
+    fac_1 = []
+    fac_2 = []
+    for i in range(1,num1+1):
+        if num1 % i == 0:
+            fac_1.append(i)
+    for i in range(1,num2+1):
+        if num2 % i == 0:
+            fac_2.append(i)
+
+    fac_1 = set(fac_1)
+    fac_2 = set(fac_2)
+
+    a = fac_1 & fac_2
+
+    max_ = max(a)
+
+    ans = num1*num2/max_
+
+    print(f'LCM of {num1} and {num2} is: {ans}')
 
 
 # Geometry
@@ -1010,6 +1057,14 @@ def third_eq():
             a = float(input('accelaration(m/s^2): '))
             v = float(input('final velocity(m/s): '))
             s_sat(s,a,v)
+
+
+#  v = u + a*t             😃
+# s   = u*t + 1/2 *a*t*t   😃
+# 2as = (v*v) - (u*u)      😃
+  
+
+
 
 
 
