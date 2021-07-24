@@ -37,7 +37,9 @@ def user():
 31 to find accelaration
 32 to find a value using v = u + at
 33 to find a value using s = ut + 1/2 * at
-34 to find a value using 2as = v^2 - u^2\n'''))
+34 to find a value using 2as = v^2 - u^2
+35 to find Lowest Common Multiple
+36 to find Common Factors\n'''))
         print('')
         invalid = False
     except:
@@ -249,6 +251,16 @@ while q.lower() != 'q':
 
     elif user_input == 34:
         third_eq()
+
+    elif user_input == 35:
+        num1 = int(input('Number 1:'))
+        num2 = int(input('Number 2:'))
+        lcm(num1,num2)
+
+    elif user_input == 36:
+        num1 = int(input('Number 1:'))
+        num2 = int(input('Number 2:'))
+        comfac(num1,num2)
 
     else:
         print('Not a valid No.\n')
