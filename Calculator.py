@@ -12,6 +12,12 @@
 # Newly added features-
 #   Finding LCM
 #   Finding Common Factors
+
+# Update V1.6.2
+# Date - 29/11/2021
+# New feature -
+#   Finding prime numbers between 2 numbers
+#   Finding Force
 from math import sqrt
 
 # Operations
@@ -158,15 +164,15 @@ def isprime(num):
     '''
     nu = num + 1
     factor = []
-    if num > 10000:
-        print('Processing....Might take several minutes')
+    # if num > 10000:
+    #     print('Processing....Might take several minutes')
     for i in range(1,nu):
         if num % i == 0:
             factor.append(i)
     if len(factor) == 2:
-        print(f'{num} is prime')
+        return True
     else:
-        print(f'{num} is not prime')
+        return False
 def primefac(num):
     '''
     num --> prime factors
@@ -201,6 +207,26 @@ def percent(percent,num):
     '''
     ans = percent/100 * num
     print(ans)
+
+def primeNoBetween(num1, num2):
+    numbers = []
+    if num1 < num2:
+        for i in range(num1+1, num2):
+            check = isprime(i)
+            if check == True:
+                numbers.append(i)
+            else:
+                pass
+    elif num1 > num2:
+        for i in range(num2+1, num1):
+            check = isprime(i)
+            if check == True:
+                numbers.append(i)
+            else:
+                pass
+    else:
+        return False
+    return numbers
 
 # Copy paste previous code
 def iscube(num):
@@ -402,6 +428,28 @@ def areatrap(height, a, b):
     ans = height*(a+b)/2
     print(f'Area of the trapazium is {ans} unit^2')
 
+def cube_vol(l,b,h):
+    '''
+         ________________________
+        |\                       \ \
+        | \                       \ \
+        |  \                       \ l
+        |   \                       \ \
+        |    \_______________________\ \
+        |    |                       | |
+        |    |                       | |
+        |    |                       | |
+        |    |                       | |
+        |    |                       | h
+         \   |                       | |
+          \  |                       | |
+           \ |                       | |
+            \|_______________________| |
+              ----------b------------
+    '''
+    ans = l*b*h
+    print(f'Area of cuboid/cube with length:{l}, breadth:{b}, height:{h} is: {ans} unit^3')
+    
 
 # Data handling
 def simintrest(principal, rate, time):
@@ -432,21 +480,20 @@ def Km_h(m):
 def speed(distance, time):
     v = distance/time
     print(f'speed: {v} m/s')
-
 def vel(displacement, time):
     v = displacement/time
     print(f'velocity: {v} m/s')
-
 def xlr8(v, u, t):
     a = (v-u)/t
     print(f'accelaration: {a} m/s^2')
 
-# Motion equation
 
 # -------------------------------------------
 
-# First equation (took me 2 and half hour+ lol)         - 13/07
 
+# Motion equation
+
+# First equation (took me 2 and half hour+ lol)         - 13/07
 # Functions for first equation
 def canf(u_,v_,a_,t_):
     '''
@@ -851,7 +898,7 @@ def second_eq():
 
 # -------------------------------------------
 
-# Third equation                                           - 17/07
+# Third equation                                           - 17/07/21
 
 # Functions for third equation
 def can_t(u_,s_,a_,v_):
@@ -1029,43 +1076,67 @@ def third_eq():
                     usa = True
             if i == 1:
                 if which[i] == True:
-                    uat = True
+                    uav = True
             if i == 2:
                 if which[i] == True:
-                    ust = True
+                    usv = True
             if i == 3:
                 if which[i] == True:
-                    sat = True
+                    sav = True
 
         if usa == True:
             u = float(input('initial velocity(m/s): '))
             s = float(input('distance travelled(m): '))
             a = float(input('accelaration(m/s^2): '))
-            s_usa(u,s,a)
-        if uat == True:
+            t_usa(u,s,a)
+        if uav == True:
             u = float(input('initial velocity(m/s): '))
             a = float(input('accelaration(m/s^2): '))
             v = float(input('final velocity(m/s): '))
-            s_uat(u,a,v)
-        if ust == True:
+            t_uav(u,a,v)
+        if usv == True:
             u = float(input('initial velocity(m/s): '))
             s = float(input('distance travelled(m): '))
             v = float(input('final velocity(m/s): '))
-            s_ust(u,s,v)
-        if sat == True:
+            t_usv(u,s,v)
+        if sav == True:
             s = float(input('distance travelled(m): '))
             a = float(input('accelaration(m/s^2): '))
             v = float(input('final velocity(m/s): '))
-            s_sat(s,a,v)
+            t_sav(s,a,v)
 
+#  ----------------------------------
 
-#  v = u + a*t             😃
-# s   = u*t + 1/2 *a*t*t   😃
-# 2as = (v*v) - (u*u)      😃
-  
+# force
 
-
-
+def force_ma():
+    m = int(input('mass: '))
+    a = int(input('accelaration: '))
+    force = m*a
+    print(f'F = ma\nF = {m}*{a}\nF = {force}')
+def force_p1_p2_t():
+    p1 = int(input('initial momentum: '))
+    p2 = int(input('final momentum: '))
+    t = int(input('time: '))
+    force = (p2-p1)/t
+    print(f'F = (p2-p1)/t\nF = ({p2}-{p1})/{t}\nF = {force}')
+def force_pt():
+    p = int(input('change in momentum: '))
+    t = int(input('time: '))
+    force = p/t
+    print(f'F = Δp/t\nF = {p}/{t}\nF = {force}')
+def force():
+    m_a = input('Do you know mass and accelaration?(Y/N) ')
+    p_t = input('Do you know momentum and time?(Y/N) ')
+    p1_p2_t = input('Do you know initial and final momentum and time?(Y/N) ')
+    if m_a.lower() == 'y':
+        force_ma()
+    elif p1_p2_t.lower() == 'y':
+        force_p1_p2_t()
+    elif p_t.lower() == 'y':
+        force_pt()
+    else:
+        print('can not find force')
 
 
 
