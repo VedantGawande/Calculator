@@ -39,7 +39,9 @@ def user():
 33 to find a value using s = ut + 1/2 * at
 34 to find a value using 2as = v^2 - u^2
 35 to find Lowest Common Multiple
-36 to find Common Factors\n'''))
+36 to find Common Factors
+37 to find prime numbers between two numbers
+38 to find Force\n'''))
         print('')
         invalid = False
     except:
@@ -142,7 +144,11 @@ while q.lower() != 'q':
 
     elif user_input == 12:
         no = int(input('Number: '))
-        isprime(no)
+        ans = isprime(no)
+        if ans == True:
+            print(f'{num} is prime')
+        else:
+            print(f'{num} is not prime')
         print('...............................................\n')
 
     elif user_input == 13:
@@ -261,6 +267,18 @@ while q.lower() != 'q':
         num1 = int(input('Number 1:'))
         num2 = int(input('Number 2:'))
         comfac(num1,num2)
+
+    elif user_input == 37:
+        num1 = int(input("Number 1: "))
+        num2 = int(input("Number 2: "))
+        numbers = primeNoBetween(num1, num2)
+        if numbers != False:
+            print(numbers)
+            print(f"Total number of prime number between {num1} and {num2} are {len(numbers)}")
+        else:
+            print("both numbers are equal")
+    elif user_input == 38:
+        force()
 
     else:
         print('Not a valid No.\n')
