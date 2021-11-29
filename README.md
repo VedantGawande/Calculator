@@ -41,3 +41,5 @@ Functions are located in __'Calculator.py'__  and main file is __'Main_updated.p
 - 34 to find a value using 2as = v^2 - u^2
 - 35 to find Lowest Common Multiple
 - 36 to find Common Factors
+- 37 to find prime numbers between two numbers
+- 38 to find Force
